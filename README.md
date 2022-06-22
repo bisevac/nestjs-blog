@@ -262,3 +262,9 @@ RESPONSE
     "result": true,
     "timestamp": "2022-06-20T22:26:19.912Z"
 }
+```
+
+
+## SWAGGER
+
+You can find swagger api documentation on `/api-guide`
