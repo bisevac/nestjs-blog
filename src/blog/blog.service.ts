@@ -22,7 +22,7 @@ export class BlogService {
     return r.generatedMaps[0];
   }
 
-  findById(id: number): Promise<Blog | null> {
+  findById(id: number): Promise<Blog> {
     return this.blogRepository.findOneBy({ id });
   }
 

@@ -85,11 +85,10 @@ export class BlogController {
     if (!blog)
       throw new HttpException('Content not found', HttpStatus.NOT_FOUND);
 
+    blog.image = this.storageService.getFullPath(blog.image);
     this.blogService
       .viewBlog(id, clientIpAddress)
       .catch((e) => console.error(e));
-
-    blog.image = this.storageService.getFullPath(blog.image);
 
     return new ApiResponse(blog);
   }
