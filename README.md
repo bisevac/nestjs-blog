@@ -104,9 +104,20 @@ class RequestDTO {
   image: file;
 }
 
-class ResponseDTO {
+class Blog {
   id: number;
-  atCreated: Date;
+  title: string;
+  shortContent?: string;
+}
+
+class ResponseDTO {
+  data: Blog[];
+  total: number;
+  totalPage: number;
+  nextPage: number;
+  prevPage: number;
+  currentPage: number;
+  limit: number;
 }
 ```
 
